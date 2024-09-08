@@ -1,0 +1,81 @@
+/* Comments format */
+:root {
+    --orange: rgb(223, 145, 0);
+}
+
+html, body {
+	background-color: black;
+	/* 0 refers to top and bottom margins, auto refers to left and right one. auto automatically centers the contend horizontally, but only with display:block elements. */ 
+	/* This width, height and margin values get rid of the horizontal bar */
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5em;
+    font-weight: lighter;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 4px;
+    width: 570px;
+    height: 1000px;
+}
+
+#calculator > div {
+    background-color: rgb(62, 62, 62);
+    border-radius: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 3rem;
+    font-weight: 200;
+    cursor: default;
+    user-select: none;
+}
+
+#calculator #screen {
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+    background-color: rgb(22, 22, 22);
+    font-size: 5rem;
+    justify-content: right;
+    padding: 30px;
+}
+
+#calculator #clear {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    background-color: rgb(40, 40, 40);
+    font-size: 2.5rem;
+}
+
+  #calculator #num0 {
+    grid-column: 1 / 3;
+    grid-row: 7;
+}
+
+div[id|="operator"] {
+    background-color: rgb(227, 136, 0) !important;
+}
+
+
